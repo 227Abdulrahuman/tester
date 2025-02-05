@@ -1,1 +1,1 @@
-alert("Vikki for Remtoe");
+alert(document.domain);
