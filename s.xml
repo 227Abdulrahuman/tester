@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DomainsSelector</string>
+    
+    <string name="button_name">Find</string>
+
+    <string-array name="companies">
+        <item>Google</item>
+        <item>Meta</item>
+        <item>Microsoft</item>
+    </string-array>
+</resources>
